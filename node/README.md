@@ -22,7 +22,7 @@ npm run
 npm test
 ```
 
-## Software
+## Project
 
 ### Contributing
 
