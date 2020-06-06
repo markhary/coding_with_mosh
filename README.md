@@ -28,4 +28,4 @@ This repository is licensed under [The Unlicense](LICENSE.md).
 
 ### Acknowledgements
 
-- Mosh Hamedani is an excellent instructor. I highly these courses if you are learning JavaScript. They are not free, but I found the education well worth the price of admission.
+- Mosh Hamedani is an excellent instructor. I highly these courses. They are not free, but I found the education well worth the price of admission.

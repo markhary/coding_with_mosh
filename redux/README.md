@@ -2,6 +2,8 @@
 
 This repository contains my code from the [Code With Mosh](https://codewithmosh.com) Ultimate Redux Course.
 
+## Software
+
 ### Installation
 
 ```bash
@@ -20,6 +22,8 @@ npm run
 npm test
 ```
 
+## Project
+
 ### Contributing
 
 You are welcome to contribute provided you accept the [Contributor Covenant Code of Conduct](CONTRIBUTING.md).
@@ -36,4 +40,4 @@ This repository is licensed under [The Unlicense](LICENSE.md).
 
 ### Acknowledgements
 
-- Mosh Hamedani is an excellent instructor. I highly these courses if you are learning JavaScript. They are not free, but I found the education well worth the price of admission.
+- Mosh Hamedani is an excellent instructor. I highly these courses. They are not free, but I found the education well worth the price of admission.

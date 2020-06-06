@@ -2,6 +2,8 @@
 
 This repository contains my code from the [Code With Mosh](https://codewithmosh.com) JavaScript Basics and OOP courses.
 
+## Software
+
 ### Installation
 
 Nothing, just install from git and read the files.
@@ -9,6 +11,8 @@ Nothing, just install from git and read the files.
 ### Usage
 
 If you are using VSCode, you can "Go Live" and uncomment modules in index.js. Otherwise look at the Console for output.
+
+## Project
 
 ### Contributing
 
@@ -26,4 +30,4 @@ This repository is licensed under [The Unlicense](LICENSE.md).
 
 ### Acknowledgements
 
-- Mosh Hamedani is an excellent instructor. I highly these courses if you are learning JavaScript. They are not free, but I found the education well worth the price of admission.
+- Mosh Hamedani is an excellent instructor. I highly these courses. They are not free, but I found the education well worth the price of admission.

@@ -1,34 +1,18 @@
-# Mosh Node.js Course
+# Coding with Mosh
 
-This repository contains my code from the [Code With Mosh](https://codewithmosh.com) Complete Node.js Course
-
-## Software
-
-### Installation
-
-```bash
-npm install
-```
-
-### Usage
-
-```bash
-npm run
-```
-
-### Testing
-
-```bash
-npm test
-```
+This repository is for the Complete SQL Mastery course from [Code With Mosh](https://codewithmosh.com).
 
 ## Software
+
+execute commands.txt
+
+## Project
 
 ### Contributing
 
 You are welcome to contribute provided you accept the [Contributor Covenant Code of Conduct](CONTRIBUTING.md).
 
-That being said, these are my notes from when I did the course, so maybe you just want to clone and keep your own changes? I won't mind if you don't share back, but I'm always open to learning new things.
+That being said, these are my notes from when I did the course, so maybe you just want to clone and keep your own changes? I won't mind, but I'm always open to learning new things.
 
 ### Versioning
 
