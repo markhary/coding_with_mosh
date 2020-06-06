@@ -1,0 +1,6 @@
+{
+  "jwtPrivateKey": "1234",
+  "database": {
+    "server": "mongodb://localhost/vidly_tests"
+  }
+}

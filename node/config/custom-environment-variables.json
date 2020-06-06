@@ -1,0 +1,6 @@
+{
+  "db": {
+    "password": "APP_DB_PASSWORD"
+  },
+  "jwtPrivateKey": "VIDLY_JWT_PRIVATE_KEY"
+}

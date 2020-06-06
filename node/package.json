@@ -1,0 +1,75 @@
+{
+  "name": "mosh-node",
+  "version": "1.0.0",
+  "description": "This repository contains my code from the [Code With Mosh](https://codewithmosh.com) Complete Node.js Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand",
+    "start": "node index.js"
+  },
+  "engines" : {
+    "node": "14.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markhary/mosh-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markhary/mosh-node/issues"
+  },
+  "homepage": "https://github.com/markhary/mosh-node#readme",
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.13.1",
+    "jest": "^26.0.1",
+    "mocha": "^7.1.2",
+    "prettier": "^2.0.5",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcrypt": "^4.0.1",
+    "compression": "^1.7.4",
+    "config": "^3.3.1",
+    "debug": "^4.1.1",
+    "eslint-config-airbnb": "^18.1.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "fawn": "^2.1.5",
+    "helmet": "^3.22.0",
+    "joi-objectid": "^3.0.1",
+    "joi-password-complexity": "^4.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.25.3",
+    "mongoose": "^5.9.14",
+    "morgan": "^1.10.0",
+    "pug": "^2.0.4",
+    "random-words": "^1.1.1",
+    "underscore": "^1.10.2",
+    "winston": "^3.2.1",
+    "winston-mongodb": "^5.0.1"
+  },
+  "jest": {
+    "clearMocks": true,
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "**/loaders/*.{js,jsx}",
+      "**/models/*.{js,jsx}",
+      "**/routes/*.{js,jsx}",
+      "**/middleware/*.{js,jsx}",
+      "!**/examples/*.{js,jsx}/",
+      "!**/examples-test/*.{js,jsx}/"
+    ],
+    "coverageDirectory": "coverage",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/examples/",
+      "/examples-test/"
+    ]
+  }
+}

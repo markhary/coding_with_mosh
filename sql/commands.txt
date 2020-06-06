@@ -1,0 +1,22 @@
+docker run --name mosh-mysql -p 3306:3306 -d -e MYSQL_ROOT_PASSWORD=mosh mysql/mysql-server:latest
+docker logs mosh-mysql 2>&1 | grep GENERATED
+
+docker exec -it mosh-mysql mysql -uroot -p
+password: mosh
+ALTER USER 'root'@'%' IDENTIFIED BY 'mosh';
+
+SELECT host, user FROM mysql.user;
+CREATE USER 'root'@'%' IDENTIFIED BY 'mosh';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+FLUSH PRIVILEGES;
+SELECT host, user FROM mysql.user;
+
+#to see IP address
+docker inspect mosh-mysql
+
+# to clean out containers and restart them
+docker container stop mosh-mysql
+docker container prune -f
+
+# to connect to shell
+docker exec -it mosh-mysql bash
