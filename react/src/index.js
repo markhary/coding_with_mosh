@@ -1,1 +1,1 @@
-vidly.js
+index.lessons.js
