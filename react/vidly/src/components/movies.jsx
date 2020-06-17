@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import { getMovies, deleteMovie } from '../services/fakeMovieService';
+import React, { Component } from "react";
+import { getMovies, deleteMovie } from "../services/fakeMovieService";
+import Movie from "./movie";
 
 class Movies extends Component {
   state = {
@@ -11,13 +12,21 @@ class Movies extends Component {
     this.setState({ movies: getMovies() });
   };
 
+  handleLike = (movie) => {
+    const movies = [...this.state.movies];
+    const index = movies.indexOf(movie);
+    movies[index] = { ...movies[index] };
+    movies[index].liked = !movies[index].liked;
+    this.setState({ movies });
+  };
+
   renderTable() {
-    const movies = getMovies();
-    if (!movies.length) return <p> There are no movies in the database </p>;
+    const { length: count } = this.state.movies;
+    if (count === 0) return <p> There are no movies in the database </p>;
 
     return (
       <React.Fragment>
-        Showing {movies.length} movies in the database.
+        Showing {this.state.movies.length} movies in the database.
         <table className="table">
           <thead>
             <tr>
@@ -26,20 +35,18 @@ class Movies extends Component {
               <th> Stock</th>
               <th> Rate</th>
               <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
-            {movies.map((movie) => (
+            {this.state.movies.map((movie) => (
               <tr key={movie._id}>
-                <td>{movie.title}</td>
-                <td>{movie.genre.name}</td>
-                <td>{movie.numberInStock}</td>
-                <td>{movie.dailyRentalRate}</td>
-                <td>
-                  <button tag={movie._id} onClick={() => this.handleDelete(movie)} className="btn btn-danger btn-sm">
-                    Delete
-                  </button>
-                </td>
+                <Movie
+                  key={movie._id}
+                  movie={movie}
+                  onDelete={this.handleDelete}
+                  onLike={this.handleLike}
+                />
               </tr>
             ))}
           </tbody>
