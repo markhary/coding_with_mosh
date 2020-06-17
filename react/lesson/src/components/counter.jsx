@@ -1,28 +1,70 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faMinus, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 class Counter extends Component {
+  componentDidUpdate(prevProps, prevState) {
+    // Make Ajav request
+    // console.log("prevProps", prevProps);
+    // console.log("prevState", prevState);
+    if (prevProps.counter.value !== this.props.counter.value) {
+      // Ajax call and get new data from server
+    }
+  }
+
+  componentWillUnmount() {
+    // console.log("Counter - Unmount");
+  }
+
   render() {
+    // console.log("Counter - Rendered");
     return (
-      <div>
-        <span className={this.getBadgeClasses()}> {this.formatValue()}</span>
-        <button onClick={() => this.props.onIncrement(this.props.counter)} className="btn btn-secondary btn-sm">
-          Increment
-        </button>
-        <button onClick={() => this.props.onDelete(this.props.counter.id)} className="btn btn-danger btn-sm m-2">
-          Delete
-        </button>
+      <div className="row">
+        <div className="col-1">
+          <span className={this.getBadgeClasses()}>{this.formatValue()}</span>
+        </div>
+        <div className="col-1">
+          <button
+            onClick={() => this.props.onIncrement(this.props.counter)}
+            className="btn btn-secondary btn-sm"
+          >
+            <FontAwesomeIcon icon={faPlus} />
+          </button>
+        </div>
+        <div className="col-1">
+          <button
+            onClick={() => this.props.onDecrement(this.props.counter)}
+            disabled={this.disableDecrement()}
+            className="btn btn-secondary btn-sm"
+          >
+            <FontAwesomeIcon icon={faMinus} />
+          </button>
+        </div>
+        <div className="col-1">
+          <button
+            onClick={() => this.props.onDelete(this.props.counter.id)}
+            className="btn btn-danger btn-sm"
+          >
+            <FontAwesomeIcon icon={faTrash} />
+          </button>
+        </div>
       </div>
     );
   }
 
+  disableDecrement() {
+    const { value } = this.props.counter;
+    return value === 0;
+  }
+
   getBadgeClasses() {
-    let classes = 'badge m-2 badge-';
-    return (classes += this.props.counter.value === 0 ? 'warning' : 'primary');
+    let classes = "badge m-2 badge-";
+    return (classes += this.props.counter.value === 0 ? "warning" : "primary");
   }
 
   formatValue() {
     const { value } = this.props.counter;
-    return value === 0 ? 'Zero' : value;
+    return value;
   }
 }
 

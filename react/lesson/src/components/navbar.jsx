@@ -1,15 +1,20 @@
-import React, { Component } from 'react';
+import React from "react";
 
-class NavBar extends Component {
-  render() {
-    return (
-      <nav className="navbar navbar-light bg-light">
-        <a className="navbar-brand" href="/#">
-          Lessons
-        </a>
-      </nav>
-    );
-  }
-}
+// Stateless Functional Component
+// sfc is shortcut
+const NavBar = ({ totalCounters }) => {
+  // console.log("NavBar - Rendered");
+
+  return (
+    <nav className="navbar navbar-light bg-light">
+      <a className="navbar-brand" href="/#">
+        Navbar{" "}
+        <span className="badge badge-pill badge-secondary">
+          {totalCounters}
+        </span>
+      </a>
+    </nav>
+  );
+};
 
 export default NavBar;
