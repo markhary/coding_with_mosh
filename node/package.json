@@ -48,7 +48,7 @@
     "moment": "^2.25.3",
     "mongoose": "^5.9.14",
     "morgan": "^1.10.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "random-words": "^1.1.1",
     "underscore": "^1.10.2",
     "winston": "^3.2.1",
