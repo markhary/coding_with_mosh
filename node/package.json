@@ -26,7 +26,7 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jest": "^23.13.1",
     "jest": "^26.0.1",
-    "mocha": "^7.1.2",
+    "mocha": "^10.2.0",
     "prettier": "^2.0.5",
     "supertest": "^4.0.2"
   },
@@ -49,7 +49,7 @@
     "mongoose": "^5.9.14",
     "morgan": "^1.10.0",
     "pug": "^2.0.4",
-    "random-words": "^1.1.1",
+    "random-words": "^1.2.0",
     "underscore": "^1.10.2",
     "winston": "^3.2.1",
     "winston-mongodb": "^5.0.1"
